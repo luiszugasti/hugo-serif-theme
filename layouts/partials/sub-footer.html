@@ -4,11 +4,18 @@
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
+		    <!-- This is really lazy... but it will work-->
+            <li><a href="{{ .Site.Data.contact.strava }}">Strava</a></li>
+			<li><a href="{{ .Site.Data.contact.facebook }}">Facebook</a></li>
+			<li><a href="{{ .Site.Data.contact.twitter }}">Twitter</a></li>
+			<li><a href="{{ .Site.Data.contact.instagram }}">Instagram</a></li>
+			<br>
             <li><strong>Phone: </strong><span>{{ .Site.Data.contact.phone }}</span></li>
+			<br>
             <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
                 {{ .Site.Data.contact.email }}</a></li>
           </ul>
-          <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>
+          
         </div>
       </div>
     </div>

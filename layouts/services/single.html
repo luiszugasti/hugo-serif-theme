@@ -1,12 +1,12 @@
 {{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-services-single{{ end }}
+{{ define "body_classes" }}page-activities-single{{ end }}
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
-      <div class="service service-single">
+      <div class="activity activity-single">
         <h1 class="title">{{.Title}}</h1>
         <div class="content">{{.Content}}</div>
       </div>
@@ -17,11 +17,11 @@
 
 {{ define "footer_js" }}
 {{ $library := resources.Get "js/libs/library.js" }}
-{{ $services := resources.Get "js/pages/services.js" }}
-{{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
+{{ $activities := resources.Get "js/pages/activities.js" }}
+{{ $activitiesJS := slice $library $activities |resources.Concat "js/activities.js" }}
 {{ if .Site.IsServer }}
-  <script type="text/javascript" src="{{ $servicesJS.RelPermalink }}"></script>
+  <script type="text/javascript" src="{{ $activitiesJS.RelPermalink }}"></script>
   {{ else }}
-  <script type="text/javascript" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>
+  <script type="text/javascript" src="{{ ($activitiesJS | minify | fingerprint).RelPermalink }}"></script>
   {{ end }}
 {{ end }}
